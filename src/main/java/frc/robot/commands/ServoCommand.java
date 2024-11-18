@@ -8,22 +8,22 @@ import frc.robot.subsystems.ServoSubsystem;
 // note: ServoControlCommand is a command that sets a specific angle on a servo subsystem.
 public class ServoCommand extends InstantCommand {
 
-    // Reference to the ServoSubsystem
-    // your code
+    // Reference to the ServoSubsystem.
+    private final ServoSubsystem servoSubsystem;
 
     // make a variable for the angle to set the servo to (should be private and final).
-    // your code
+    private final double servoAngle;
 
     // note: Constructor for ServoControlCommand.
     // @param servoSubsystem The ServoSubsystem to control.
     // @param servoAngle The angle to set on the servo when the command is executed.
     public ServoCommand(ServoSubsystem servoSubsystem, double servoAngle) {
         // Assign the provided ServoSubsystem and servoAngle to class variables.
-        // your code
-        // your code
+        this.servoSubsystem = servoSubsystem;
+        this.servoAngle = servoAngle;
 
-        // Declare that this command requires the ServoSubsystem, using the addRequirements() method.
-        // your code
+        // Declare that this command requires the ServoSubsystem.
+        addRequirements(servoSubsystem);
     }
 
     // note: Called when the command is executed. 
@@ -31,6 +31,6 @@ public class ServoCommand extends InstantCommand {
     @Override
     public void execute() {
         // Set the servo to a specific angle. 
-        // your code
+        servoSubsystem.setAngle(servoAngle, false);
     }
 }
