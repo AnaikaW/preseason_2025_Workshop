@@ -9,25 +9,25 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 // note: The Robot class serves as the main entry point for the robot program. It manages the cycle of the robot and coordinates subsystems and commands.
 public class Robot extends TimedRobot {
 
-    // Declare commands to manage during different robot states. 
-    private Command m_teleopCommand; // Primary teleop command.
+    // Declare commands (just teleopcommand) to manage during different robot states. 
+    // your code
 
     // Declare the RobotContainer, which sets up subsystems and commands.
-    private RobotContainer m_robotContainer;
+    // your code
 
     //note: This method is called when the robot is first started up.
     //Initialize subsystems, commands, and other robot-wide components here.
     @Override
     public void robotInit() {
         // Instantiate the RobotContainer, which handles subsystem and command initialization.
-        m_robotContainer = new RobotContainer();
+        // your code
     }
 
     // note: This method is called every robot packet, no matter the mode. Use this for items like diagnostics that should run during all modes.
     @Override
     public void robotPeriodic() {
         // Run the CommandScheduler to execute scheduled commands.
-        CommandScheduler.getInstance().run();
+        // your code
     }
 
     // note: This method is called once each time the robot enters Teleop mode.
@@ -35,11 +35,11 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopInit() {
         // Retrieve the primary teleop command from RobotContainer.
-        m_teleopCommand = m_robotContainer.getTeleopCommand();
+        // your code
 
         // Schedule the command if it is not null.
-        if (m_teleopCommand != null) {
-            m_teleopCommand.schedule();
+        if ( /* your code */) {
+            // your code
         }
     }
 
