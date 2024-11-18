@@ -138,13 +138,13 @@ public final class Falcon500DriveControllerFactoryBuilder {
 
         @Override
         public double getStateVelocity() {
-            return (motor.getRotorVelocity().getValue()*Constants.TICKS_PER_REV)/Constants.SWERVE_TICKS_PER_METER; 
+            return (motor.getRotorVelocity().getValue()); 
             
         }
 
         @Override
         public double getPosition(){
-            return (motor.getRotorPosition().getValue()*Constants.TICKS_PER_REV);
+            return (motor.getRotorPosition().getValue());
         }
     }
 }
